@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Subramanyeswara Gold Designings | Nandyal</title>
-    <!-- Tailwind CSS for styling -->
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts for a luxury feel -->
+
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    
+
     <script>
         tailwind.config = {
             theme: {
@@ -30,147 +29,112 @@
             }
         }
     </script>
+
     <style>
         .bg-hero {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1611591437281-460bfbe1220a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+            url('https://images.unsplash.com/photo-1611591437281-460bfbe1220a');
             background-size: cover;
             background-position: center;
         }
     </style>
 </head>
-<body class="font-sans bg-stone-50 text-gray-800 antialiased">
 
-    <!-- Navbar -->
-    <nav class="bg-white shadow-md fixed w-full z-50 top-0">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-20 items-center">
-                <div class="flex-shrink-0 flex items-center">
-                    <h1 class="font-serif text-xl md:text-2xl font-bold text-gold-dark tracking-wider">SUBRAMANYESWARA<br><span class="text-sm md:text-base text-gray-600 tracking-widest">GOLD DESIGNINGS</span></h1>
-                </div>
-                <div class="hidden md:flex space-x-8 items-center">
-                    <a href="#home" class="text-gray-700 hover:text-gold transition">Home</a>
-                    <a href="#specialty" class="text-gray-700 hover:text-gold transition">Wholesale Offer</a>
-                    <a href="#contact" class="text-gray-700 hover:text-gold transition">Contact</a>
-                    <a href="tel:+919866673579" class="bg-gold text-white px-5 py-2 rounded shadow hover:bg-gold-dark transition font-semibold">
-                        <i class="fa-solid fa-phone mr-2"></i> Call Now
-                    </a>
-                </div>
-            </div>
+<body class="font-sans bg-stone-50 text-gray-800">
+
+<!-- Navbar -->
+<nav class="bg-white shadow-md fixed w-full z-50 top-0">
+    <div class="max-w-7xl mx-auto px-4 flex justify-between h-20 items-center">
+        <h1 class="font-serif text-xl font-bold text-gold-dark">
+            SUBRAMANYESWARA<br>
+            <span class="text-sm text-gray-600">GOLD DESIGNINGS</span>
+        </h1>
+
+        <div class="hidden md:flex space-x-8 items-center">
+            <a href="#home">Home</a>
+            <a href="#rates">Rates</a>
+            <a href="#contact">Contact</a>
         </div>
-    </nav>
+    </div>
+</nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="bg-hero h-screen flex items-center justify-center text-center mt-10">
-        <div class="px-4">
-            <p class="text-gold-light font-sans tracking-[0.2em] uppercase mb-4 text-sm md:text-base">Premium Craftsmanship in Nandyal</p>
-            <h2 class="text-4xl md:text-6xl font-serif font-bold text-white mb-6 leading-tight">Exquisite Gold Designs <br>at Wholesale Rates</h2>
-            <p class="text-gray-200 mb-8 max-w-2xl mx-auto text-lg">Experience the finest quality jewellery directly from the makers. Retail customers welcome at wholesale prices.</p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#contact" class="bg-gold text-white px-8 py-3 rounded text-lg font-semibold shadow-lg hover:bg-gold-dark transition">Visit Our Store</a>
-                <a href="https://wa.me/919866673579" target="_blank" class="bg-green-600 text-white px-8 py-3 rounded text-lg font-semibold shadow-lg hover:bg-green-700 transition flex items-center justify-center">
-                    <i class="fa-brands fa-whatsapp text-xl mr-2"></i> WhatsApp Us
-                </a>
-            </div>
+<!-- Hero -->
+<section id="home" class="bg-hero h-screen flex items-center justify-center text-center mt-10">
+    <div>
+        <h2 class="text-5xl text-white font-serif">Wholesale Gold Designs</h2>
+        <p class="text-gray-200 mt-4">Retail Customers at Wholesale Price</p>
+    </div>
+</section>
+
+<!-- Rates Section -->
+<section id="rates" class="py-16 bg-white text-center">
+    <h3 class="text-3xl font-bold mb-6">Today's Gold & Silver Rates</h3>
+
+    <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div class="p-6 bg-stone-50 shadow rounded">
+            <h4 class="text-xl font-semibold text-gold-dark">Gold</h4>
+            <p class="text-2xl font-bold">
+                ₹ <span id="goldRate">Loading...</span> / 10g
+            </p>
         </div>
-    </section>
 
-    <!-- Wholesale Specialty Section -->
-    <section id="specialty" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h3 class="font-serif text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Specialty</h3>
-            <div class="w-24 h-1 bg-gold mx-auto mb-12"></div>
-            
-            <div class="grid md:grid-cols-3 gap-10">
-                <!-- Feature 1 -->
-                <div class="p-8 border border-gray-100 rounded-lg shadow-sm hover:shadow-md transition bg-stone-50">
-                    <div class="w-16 h-16 bg-gold-light rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fa-solid fa-tags text-2xl text-gold-dark"></i>
-                    </div>
-                    <h4 class="font-serif text-xl font-bold mb-3">Direct Wholesale Rates</h4>
-                    <p class="text-gray-600">We operate in the wholesale market, which means we pass the savings directly to you. Get premium retail designs at unbeatable wholesale prices.</p>
-                </div>
-                <!-- Feature 2 -->
-                <div class="p-8 border border-gray-100 rounded-lg shadow-sm hover:shadow-md transition bg-stone-50">
-                    <div class="w-16 h-16 bg-gold-light rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fa-solid fa-gem text-2xl text-gold-dark"></i>
-                    </div>
-                    <h4 class="font-serif text-xl font-bold mb-3">Custom Gold Designing</h4>
-                    <p class="text-gray-600">Bring us your vision. Our expert craftsmen specialize in bringing unique, custom gold designs to life with impeccable precision.</p>
-                </div>
-                <!-- Feature 3 -->
-                <div class="p-8 border border-gray-100 rounded-lg shadow-sm hover:shadow-md transition bg-stone-50">
-                    <div class="w-16 h-16 bg-gold-light rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fa-solid fa-scale-balanced text-2xl text-gold-dark"></i>
-                    </div>
-                    <h4 class="font-serif text-xl font-bold mb-3">Guaranteed Purity</h4>
-                    <p class="text-gray-600">Trust is our foundation. Every piece of jewellery we craft comes with a guarantee of authenticity and purity you can rely on.</p>
-                </div>
-            </div>
+        <div class="p-6 bg-stone-50 shadow rounded">
+            <h4 class="text-xl font-semibold">Silver</h4>
+            <p class="text-2xl font-bold">
+                ₹ <span id="silverRate">Loading...</span> / kg
+            </p>
         </div>
-    </section>
+    </div>
 
-    <!-- About & Contact Section -->
-    <section id="contact" class="py-20 bg-stone-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col md:flex-row">
-                
-                <!-- Contact Details -->
-                <div class="md:w-1/2 p-10 md:p-14 bg-gray-900 text-white">
-                    <h3 class="font-serif text-3xl font-bold text-gold mb-6">Get in Touch</h3>
-                    <p class="text-gray-300 mb-10">Visit our store to view our latest collections or discuss custom designs. We are always ready to serve you with the best rates in Nandyal.</p>
-                    
-                    <div class="space-y-6">
-                        <div class="flex items-start">
-                            <i class="fa-solid fa-user text-gold text-xl mt-1 mr-4 w-6 text-center"></i>
-                            <div>
-                                <h5 class="text-sm text-gray-400 uppercase tracking-wider">Proprietor</h5>
-                                <p class="text-lg font-semibold">R S RAMA KRISHNA</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <i class="fa-solid fa-location-dot text-gold text-xl mt-1 mr-4 w-6 text-center"></i>
-                            <div>
-                                <h5 class="text-sm text-gray-400 uppercase tracking-wider">Address</h5>
-                                <p class="text-lg">1/100A Main Bazaar<br>Opp to Gupta Trading Co.<br>Nandyal, Andhra Pradesh</p>
-                            </div>
-                        </div>
+    <p class="mt-4 text-sm text-gray-500">
+        Last Updated: <span id="updateTime">--</span>
+    </p>
+</section>
 
-                        <div class="flex items-start">
-                            <i class="fa-solid fa-phone text-gold text-xl mt-1 mr-4 w-6 text-center"></i>
-                            <div>
-                                <h5 class="text-sm text-gray-400 uppercase tracking-wider">Phone</h5>
-                                <a href="tel:+919866673579" class="text-lg hover:text-gold transition">+91 98666 73579</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Map Placeholder -->
-                <div class="md:w-1/2 min-h-[400px] bg-gray-200 relative">
-                    <!-- Google Maps Embed for Nandyal -->
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3839.4231802927236!2d78.4735143!3d15.4831614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb5cac5d5555555%3A0x1234567890abcdef!2sMain%20Bazaar%2C%20Nandyala!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
-                        width="100%" 
-                        height="100%" 
-                        style="border:0; position: absolute; top:0; left:0;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </div>
+<!-- Contact -->
+<section id="contact" class="py-16 bg-gray-900 text-white text-center">
+    <h3 class="text-2xl font-bold mb-4">Contact</h3>
+    <p>R S RAMA KRISHNA</p>
+    <p>📞 9866673579</p>
+    <p>Main Bazaar, Nandyal</p>
+</section>
 
-            </div>
-        </div>
-    </section>
+<!-- Footer -->
+<footer class="bg-black text-gray-400 py-6 text-center">
+    © 2026 SUBRAMANYESWARA GOLD DESIGNINGS
+</footer>
 
-    <!-- Footer -->
-    <footer class="bg-gray-950 text-gray-400 py-8 text-center border-t border-gray-800">
-        <div class="max-w-7xl mx-auto px-4">
-            <h2 class="font-serif text-xl font-bold text-gold-dark tracking-wider mb-2">SUBRAMANYESWARA GOLD DESIGNINGS</h2>
-            <p>&copy; 2026 All Rights Reserved.</p>
-        </div>
-    </footer>
+<!-- Script -->
+<script>
+async function fetchRates() {
+    try {
+        const res = await fetch("https://api.metals.live/v1/spot");
+        const data = await res.json();
+
+        let gold = data.find(i => i.gold)?.gold;
+        let silver = data.find(i => i.silver)?.silver;
+
+        let usdToInr = 83;
+
+        let goldInr = Math.round(gold * usdToInr * 10);
+        let silverInr = Math.round(silver * usdToInr);
+
+        document.getElementById("goldRate").innerText = goldInr;
+        document.getElementById("silverRate").innerText = silverInr;
+
+        document.getElementById("updateTime").innerText =
+            new Date().toLocaleString("en-IN");
+
+    } catch (e) {
+        document.getElementById("goldRate").innerText = "Unavailable";
+        document.getElementById("silverRate").innerText = "Unavailable";
+        document.getElementById("updateTime").innerText = "Error";
+    }
+}
+
+fetchRates();
+setInterval(fetchRates, 300000);
+</script>
 
 </body>
 </html>
